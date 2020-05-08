@@ -1,0 +1,133 @@
+.contenedorinput { 
+    margin:5px auto 0; 
+    padding:5px 10px 10px;
+  }
+  
+  .group { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+  
+  input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:285px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  
+  input:focus {
+    outline:none;
+  }
+  
+  label {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  .bar {
+    position:relative; 
+    display:block;
+    width:300px; 
+  }
+  
+  .bar:before, .bar:after {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  .bar:before {
+    left:50%;
+  }
+  
+  .bar:after {
+    right:50%; 
+  }
+  
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  input:focus ~ .highlight {
+    -webkit-animation:inpHighlighter 0.3s ease;
+    -moz-animation:inpHighlighter 0.3s ease;
+    animation:inpHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inpHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inpHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inpHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+
+
+  .formHorizontal{
+    display: flex;
+    flex-flow:row no-wrap;
+  }
+
+  select{
+    border-radius: 5px;
+    /* padding-top: 20px; */
+    width: 285px;
+  }
+  select:focus{
+    outline: none;
+  }
+
+  .botonForm{
+    border: none;
+    background: #0C2F4F;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    width: 320px;
+  }
+
+  .botonForm:hover{
+    background: #081F34;
+  }
+
+  
