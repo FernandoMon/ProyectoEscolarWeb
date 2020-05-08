@@ -139,6 +139,69 @@
                     // alert(nombre);
                     location.href="EliminarMaestro.php?id="+id+"&nombre="+nombre+"&apPat="+apPat+"&apMat="+apMat+"&pass="+pass;
                 });
+
+// ------------------------------------- Administradores ------------------------------------------
+
+                $(".botonModificarAdmin").click(function() {
+
+                    var id = "";
+                    var nombre = "";
+                    var apPat = "";
+                    var apMat = "";
+                    var pass = "";
+                    // alert('me active');
+
+                    // Obtenemos todos los valores contenidos en los <td> de la fila
+                    // seleccionada
+                    $(this).parents("tr").find(".numero").each(function() {
+                        id += $(this).html();
+                    });
+                    $(this).parents("tr").find(".nombre").each(function() {
+                        nombre += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apPat").each(function() {
+                        apPat += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apMat").each(function() {
+                        apMat += $(this).html();
+                    });
+                    // $(this).parents("tr").find(".pass").each(function() {
+                    //     pass += $(this).html();
+                    // });
+                    // console.log(id);
+                    // alert(nombre);
+                    location.href="ModificarAdmin.php?id="+id+"&nombre="+nombre+"&apPat="+apPat+"&apMat="+apMat;
+                });
+                $(".botonEliminarAdmin").click(function() {
+
+                    var id = "";
+                    var nombre = "";
+                    var apPat = "";
+                    var apMat = "";
+                    var pass = "";
+                    // alert('me active');
+
+                    // Obtenemos todos los valores contenidos en los <td> de la fila
+                    // seleccionada
+                    $(this).parents("tr").find(".numero").each(function() {
+                        id += $(this).html();
+                    });
+                    $(this).parents("tr").find(".nombre").each(function() {
+                        nombre += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apPat").each(function() {
+                        apPat += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apMat").each(function() {
+                        apMat += $(this).html();
+                    });
+                    // $(this).parents("tr").find(".pass").each(function() {
+                    //     pass += $(this).html();
+                    // });
+                    // console.log(id);
+                    // alert(nombre);
+                    location.href="EliminarAdministrador.php?id="+id+"&nombre="+nombre+"&apPat="+apPat+"&apMat="+apMat;
+                });
             });
         </script>
         <title>Document</title>
@@ -173,8 +236,8 @@
                     </li> 
                     <li><a href="#">Administradores <i class="fas fa-angle-down"></i></a>
                         <ul class="subMenu">
-                            <li><a href="#">Consultar</a></li>
-                            <li><a href="#">Crear</a></li>
+                            <li><a href="ConsultarAdministradores.php">Consultar</a></li>
+                            <li><a href="CrearAdministrador.php">Crear</a></li>
                         </ul>
                     </li> 
                     <li><a href="#">Generaciones <i class="fas fa-angle-down"></i></a>
