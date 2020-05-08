@@ -93,7 +93,6 @@
                         <ul class="subMenu">
                             <li><a href="CrearMateria.php">Crear</a></li>
                             <li><a href="ConsultarMateria.php">Consultar</a></li>
-                            <li><a href="ConsultarMateria.php">Consultar Inactivos</a></li>
                         </ul>
                     </li> 
                     <li><a href="#">Maestros <i class="fas fa-angle-down"></i></a>
