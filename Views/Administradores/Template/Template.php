@@ -32,6 +32,7 @@
                     alert(valores);
                 });
 
+// ------------------------------------- Materias ------------------------------------------
 
                 $(".boton").click(function() {
 
@@ -75,6 +76,69 @@
                     // alert(valores);
                     location.href="EliminarMateria.php?id="+id+"&nombre="+nombre+"&grado="+grado;
                 });
+
+// ------------------------------------- Maestros ------------------------------------------
+
+                $(".botonModificarMaestro").click(function() {
+
+                    var id = "";
+                    var nombre = "";
+                    var apPat = "";
+                    var apMat = "";
+                    var pass = "";
+                    // alert('me active');
+
+                    // Obtenemos todos los valores contenidos en los <td> de la fila
+                    // seleccionada
+                    $(this).parents("tr").find(".numero").each(function() {
+                        id += $(this).html();
+                    });
+                    $(this).parents("tr").find(".nombre").each(function() {
+                        nombre += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apPat").each(function() {
+                        apPat += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apMat").each(function() {
+                        apMat += $(this).html();
+                    });
+                    $(this).parents("tr").find(".pass").each(function() {
+                        pass += $(this).html();
+                    });
+                    // console.log(id);
+                    // alert(nombre);
+                    location.href="ModificarMaestro.php?id="+id+"&nombre="+nombre+"&apPat="+apPat+"&apMat="+apMat+"&pass="+pass;
+                });
+                $(".botonEliminarMaestro").click(function() {
+
+                    var id = "";
+                    var nombre = "";
+                    var apPat = "";
+                    var apMat = "";
+                    var pass = "";
+                    // alert('me active');
+
+                    // Obtenemos todos los valores contenidos en los <td> de la fila
+                    // seleccionada
+                    $(this).parents("tr").find(".numero").each(function() {
+                        id += $(this).html();
+                    });
+                    $(this).parents("tr").find(".nombre").each(function() {
+                        nombre += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apPat").each(function() {
+                        apPat += $(this).html();
+                    });
+                    $(this).parents("tr").find(".apMat").each(function() {
+                        apMat += $(this).html();
+                    });
+                    $(this).parents("tr").find(".pass").each(function() {
+                        pass += $(this).html();
+                    });
+                    // console.log(id);
+                    // alert(nombre);
+                    location.href="EliminarMaestro.php?id="+id+"&nombre="+nombre+"&apPat="+apPat+"&apMat="+apMat+"&pass="+pass;
+                });
             });
         </script>
         <title>Document</title>
@@ -91,14 +155,14 @@
                 <ul>
                     <li><a href="#">Materias <i class="fas fa-angle-down"></i></a>
                         <ul class="subMenu">
-                            <li><a href="CrearMateria.php">Crear</a></li>
                             <li><a href="ConsultarMateria.php">Consultar</a></li>
+                            <li><a href="CrearMateria.php">Crear</a></li>
                         </ul>
                     </li> 
                     <li><a href="#">Maestros <i class="fas fa-angle-down"></i></a>
                         <ul class="subMenu">
-                            <li><a href="#">Consultar</a></li>
-                            <li><a href="#">Crear</a></li>
+                            <li><a href="ConsultarMaestros.php">Consultar</a></li>
+                            <li><a href="CrearMaestro.php">Crear</a></li>
                         </ul>
                     </li> 
                     <li><a href="#">Alumnos <i class="fas fa-angle-down"></i></a>

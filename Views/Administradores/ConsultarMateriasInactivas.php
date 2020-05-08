@@ -9,7 +9,7 @@
     // } 
 ?>
 <div>
-    <h1>Materias</h1>
+    <h1>Materias Inactivas</h1>
     <a href="ConsultarMateria.php">Mostrar elementos Activos</a>
 <table id="example" class="display" style="width:100%">
         <thead>
